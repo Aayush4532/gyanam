@@ -71,7 +71,38 @@
 
 ## ⚙️ **How to Run Locally**
 
-```bash
-git clone https://github.com/yourusername/gyanam.git
+bash
+
+git clone [https://github.com/yourusername/gyanam.git](https://github.com/Aayush4532/gyanam.git)
+
 cd gyanam
+
 npm install
+
+📝 Create a .env file with:
+
+TWILIO_ACCOUNT_SID=your_sid
+
+TWILIO_AUTH_TOKEN=your_token
+
+TWILIO_PHONE_NUMBER=+91xxxxxxxxxx
+
+OPENAI_API_KEY=your_openai_key
+
+node index.js
+---
+
+## 🙏 **Contribute**
+अगर आप भी मानते हैं कि ज्ञान हर किसी का अधिकार है,
+
+तो आइए हमारे साथ जुड़िए और इस यात्रा को आगे बढ़ाइए।
+
+Pull Requests, Suggestions, Feedback — सबका स्वागत है।
+
+## 🫶 **Made with love, for the unseen Bharat 🇮🇳**
+- "Gyanam is not just a backend. It's a backbone for those who had no one to ask."
+
+## 🧑‍💻 **Author**
+- Er Karamjeet Sony
+- Backend Engineer | Social Tech Builder
+- 📧 karamjeetsony8449@gmail.com
