@@ -23,6 +23,15 @@
     साधो, साधो, साधो, साधो।।
 </p>
 
+---
+
+# Goal To Complete This Year
+
+<p>
+
+    AI Call, Rural Areas People can Live call on Our Toll Free Number, Where Ai will respond to them with Knowledge.
+</p>
+
 
 # 📡 GYANAM - ज्ञान से जुड़ी हर जिज्ञासा का समाधान, अब SMS पर
 
