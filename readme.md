@@ -72,11 +72,7 @@ All through **voice-based interaction in local languages** — without the inter
 
 ## 🚀 Coming Soon
 
-- Multi-language support (Hindi, Punjabi, etc.)
-- Offline call logging with delayed AI response
-- Integration with government data APIs
-- Gyanam Lite for feature phones via SMS only
-
+- Integration with government data APIs.
 ---
 
 ## 🤝 Join Us
