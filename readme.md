@@ -50,7 +50,7 @@ Gyanam is being built with the following stack:
 1. A user dials a dedicated phone number (through Twilio).
 2. Gyanam answers using IVR and converts speech to text.
 3. AI processes the query and generates a response.
-4. The response is either spoken back on the call or sent via SMS.
+4. The response is spoken to the user.
 5. All interactions are logged in the database for learning and safety.
 
 ---
