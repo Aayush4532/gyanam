@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gemini Voice Assistant</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 50px;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    form {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    input {
+      padding: 10px;
+      width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 10px 15px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    audio {
+      margin-top: 20px;
+    }
+
+    .status {
+      margin-top: 15px;
+      font-style: italic;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <h1>🗣️ Gemini Voice Assistant</h1>
+
+  <form id="form">
+    <input id="input" type="text" placeholder="Ask anything..." required />
+    <button type="submit">Send</button>
+  </form>
+
+  <audio id="audio" controls></audio>
+  <div class="status" id="status"></div>
+
+  <script>
+    const form = document.getElementById("form");
+    const input = document.getElementById("input");
+    const audio = document.getElementById("audio");
+    const statusDiv = document.getElementById("status");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const question = input.value.trim();
+      if (!question) return;
+
+      input.value = "";
+      statusDiv.textContent = "Thinking... 🧠";
+
+      try {
+        const res = await fetch("http://localhost:1102/api/ask", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ prompt: question })
+        });
+
+        if (!res.ok) throw new Error("Server error");
+
+        // Fetch the generated audio file directly
+        audio.src = "http://localhost:1102/audio/out.wav";
+        audio.load();
+        audio.play();
+        statusDiv.textContent = "Response received!";
+      } catch (err) {
+        console.error(err);
+        statusDiv.textContent = "Failed to get response.";
+      }
+    });
+  </script>
+</body>
+</html>
