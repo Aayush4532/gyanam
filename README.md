@@ -25,15 +25,6 @@
 
 ---
 
-# Goal To Complete This Year
-
-<p>
-
-    AI Call, Rural Areas People can Live call on Our Toll Free Number
-    
-    Where Ai will respond to them with Knowledge In their own regional Language.
-</p>
-
 
 #  GYANAM - ज्ञान से जुड़ी हर जिज्ञासा का समाधान, अब SMS पर
 
@@ -127,6 +118,18 @@ TWILIO_PHONE_NUMBER=+91xxxxxxxxxx
 OPENAI_API_KEY=your_openai_key
 
 node index.js
+---
+
+
+# Goal To Complete This Year
+
+<p>
+
+    AI Call, Rural Areas People can Live call on Our Toll Free Number
+    
+    Where Ai will respond to them with Knowledge In their own regional Language.
+</p>
+
 ---
 
 ##  **Contribute**
