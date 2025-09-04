@@ -101,7 +101,7 @@
 
 bash
 
-git clone [https://github.com/yourusername/gyanam.git](https://github.com/Aayush4532/gyanam.git)
+git clone [https://github.com/Aayush4532/gyanam.git](https://github.com/Aayush4532/gyanam.git)
 
 cd gyanam
 
