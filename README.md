@@ -115,7 +115,7 @@ TWILIO_AUTH_TOKEN=your_token
 
 TWILIO_PHONE_NUMBER=+91xxxxxxxxxx
 
-OPENAI_API_KEY=your_openai_key
+GEMINI_KEY=your_gemini_key
 
 node index.js
 ---
