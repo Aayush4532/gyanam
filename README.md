@@ -1,5 +1,11 @@
 # Gyanam AI
 
+<p align="center">
+  <img src="./readme.png"
+       alt="Gyanam AI Architecture"
+       width="110%">
+</p>
+
 > **Democratizing AI through Voice Calls and SMS.**
 
 Gyanam AI is a multilingual conversational platform that enables users to access Large Language Models using ordinary phone calls and SMS. Instead of relying on smartphones or internet connectivity, the platform allows users to interact with AI in their preferred language through familiar communication channels.
@@ -54,9 +60,9 @@ The platform is designed around a **communication-first architecture**, where Vo
 
 ## Technology Stack
 
-| Domain | Technology |
-|---------|------------|
-| Backend | Node.js, Express.js |
-| AI | Google Gemini |
+| Domain        | Technology              |
+| ------------- | ----------------------- |
+| Backend       | Node.js, Express.js     |
+| AI            | Google Gemini           |
 | Communication | Twilio Voice & SMS APIs |
-| Database | MongoDB |
+| Database      | MongoDB                 |
