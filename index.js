@@ -5,11 +5,15 @@ const dotenv = require("dotenv");
 const runGemini = require("./gemini.js");
 const User = require("./schema.js");
 const { MessagingResponse } = require("twilio").twiml;
+const { validLanguages, isLanguagePresentInMessage } = require("./constants.js");
+const voiceRoutes = require("./routes/voiceRoutes.js");
 
 dotenv.config();
 const port = process.env.PORT || 3000;
 
 app.use(express.urlencoded({ extended: false }));
+
+app.use("/api/voice", voiceRoutes);
 
 app.post("/api/sms", async (req, res) => {
   const sender = req.body.From;
@@ -18,19 +22,6 @@ app.post("/api/sms", async (req, res) => {
   if (!sender || !msg) {
     return res.status(400).send("Give correct query");
   }
-
-  const validLanguages = [
-    "English", "Assamese", "Bengali", "Bodo", "Dogri", "Gujarati",
-    "Hindi", "Kannada", "Kashmiri", "Konkani", "Maithili", "Malayalam",
-    "Manipuri", "Marathi", "Nepali", "Odia", "Punjabi", "Sanskrit",
-    "Santali", "Sindhi", "Tamil", "Telugu"
-  ];
-
-  const isLanguagePresentInMessage = (text) => {
-    return validLanguages.some(
-      (lang) => text.trim().toLowerCase() === lang.toLowerCase()
-    );
-  };
 
   try {
     if (isLanguagePresentInMessage(msg)) {
